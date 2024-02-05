@@ -1,0 +1,129 @@
+*{
+    --main-bg-color: #3c4a74;
+    --main-accent-color: #4cd480;
+    --main-orange-color: #daa33c;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--main-bg-color);
+}
+
+.round {
+    position: relative;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+}
+
+.round2 {
+    position: relative;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    height: 20px;
+    width: 20px;
+  }
+
+.round.type1 {
+    border-color: var(--main-accent-color);
+}
+
+.round.type2 {
+    border-color: var(--main-orange-color)
+}
+
+.todo {
+    display: flex;
+    align-items: center;
+    margin: 10px auto;
+    width: 80%;
+    background-color: #9a9999;
+    border-radius: 30px;
+    padding: 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+h4 {
+    color: #eee;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.drop {
+    display: flex;
+    align-items: center;
+    margin: 10px auto;
+    background-color: #9a9999;
+    border-radius: 30px;
+    padding: 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+.todo>span {
+    padding-left: 10px;
+}
+
+.todo.completed {
+    text-decoration: line-through;
+}
+
+.todo.completed .round {
+    border-color: transparent;
+    background-color: rgba(255, 255, 255, 0.5);
+}  
+
+.add-todo {
+  position: fixed;
+  bottom: 20px;
+  left: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 80%;
+  margin: 100px auto 0;
+}
+
+input {
+    width: 50%;
+    border-radius: 30px;
+    padding: 15px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+}
+
+button {
+    background-color: var(--main-accent-color);
+    font-size: 34px;
+    color: #fff;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 46px;
+    height: 46px;
+}
+
+.remove {
+    color:crimson;
+    font-size: 15px;
+    position: absolute;
+    top: 29%;
+    right: 6%;
+}
+
