@@ -1,12 +1,12 @@
 <template>
   <div 
       class="todo" 
-      :class="{completed: isCompleted}"
+      :class="{completed: todoProp.isCompleted}"
       @click="$emit('complSwap')"
     >
-      <div class="round" :class="classtodoType()"></div>
+      <div class="round" :class="classtodoType"></div>
       
-      <span>{{name}}</span>
+      <span>{{todoProp.name}}</span>
 
       <div class="remove" @click="$emit('remove')">
         <div class="round2">
@@ -19,13 +19,15 @@
 <script>
 export default {
   name: 'todo-item',
-  props: ['_id', 'name', 'isCompleted', 'type'],
+  props: {
+    todoProp: Object
+  },
   emits: ['remove', 'complSwap'],
-  methods: {
-    classtodoType: function () {
+  computed: {
+    classtodoType() {
       return {
-        type1: this.type === 'type1', 
-        type2: this.type === 'type2'
+        type1: this.todoProp.type === 'type1', 
+        type2: this.todoProp.type === 'type2'
       }
     }
   }

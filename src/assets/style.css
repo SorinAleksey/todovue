@@ -59,7 +59,28 @@ h4 {
     margin-bottom: 25px;
 }
 
-.drop {
+.filter-div {
+    display: flex;
+    margin: 10px auto;
+    border-radius: 30px;
+    padding: 15px;
+    position: relative;
+    height: 40px;
+}
+
+.filter-drop {
+    display: flex;
+    align-items: center;
+    margin: 10px auto;
+    background-color: #9a9999;
+    border-radius: 30px;
+    padding: 15px;
+    cursor: pointer;
+    position: absolute;
+    left: 10%;
+}
+
+.type-drop {
     display: flex;
     align-items: center;
     margin: 10px auto;
